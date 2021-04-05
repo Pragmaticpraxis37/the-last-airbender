@@ -1,0 +1,13 @@
+<h3>Total Number of People: <%= @total_number_of_people %></h3><br>
+<% @display_information.each do |info| %>
+  <h3>Name</h3>
+  <%= info.name %><br>
+  <h3>Photo</h3>
+  <%= info.photo %><br>
+  <h3>Allies</h3>
+  <%= info.allies.join %><br>
+  <h3>Enemies</h3>
+  <%= info.enemies.join %><br>
+  <h3>Affiliation</h3>
+  <%= info.affiliations %><br>
+<% end %>

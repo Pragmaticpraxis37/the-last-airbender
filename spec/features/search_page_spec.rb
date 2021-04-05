@@ -8,6 +8,8 @@ describe 'search page' do
 
     click_on 'Search For Members'
 
+    expect(current_path).to eq(search_path)
+
     expect(page).to have_content("")
   end
 end
