@@ -9,14 +9,16 @@ class SearchController < ApplicationController
 
     total_number_of_people = total_data.length
 
-    total_data.reduce([]) do |acc, data|
-      # acc << OpenStruct.new({
-      #                         name: data[:name],
-      #                         allies: data[:allies],
-      #                         enemies: data[:enemies],
-      #                         affiliations: data[:affiliation]
-      #   })
-      require "pry"; binding.pry
+    batch = total_data[0..24]
+
+    uncleaned_display_information = batch.reduce([]) do |acc, data|
+      acc << OpenStruct.new({
+                              name: data[:name],
+                              photo: data[:photoURL],
+                              allies: data[:allies],
+                              enemies: data[:enemies],
+                              affiliations: data[:affiliation]
+        })
     end
   end
 
