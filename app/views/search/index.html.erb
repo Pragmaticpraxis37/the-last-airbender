@@ -5,9 +5,18 @@
   <h3>Photo</h3>
   <%= info.photo %><br>
   <h3>Allies</h3>
-  <%= info.allies.join %><br>
+  <% if info.allies.empty? %>
+    <%= "None" %>
+  <% else %>
+    <%= info.allies.join %><br>
+  <% end %>
   <h3>Enemies</h3>
-  <%= info.enemies.join %><br>
+  <% if info.enemies.empty? %>
+    <%= "None" %>
+  <% else %>
+    <%= info.enemies.join %><br>
+  <% end %>
   <h3>Affiliation</h3>
   <%= info.affiliations %><br>
+  <br>
 <% end %>

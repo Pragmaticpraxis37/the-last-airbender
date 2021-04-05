@@ -10,21 +10,18 @@ describe 'search page' do
 
     expect(current_path).to eq(search_path)
 
-    expect(page).to have_content("")
+    expect(page).to have_content("Total Number of People: 97")
+
+    expect(page).to have_content("Chan (Fire Nation admiral)")
+    expect(page).to have_content("Ozai")
+    expect(page).to have_content("Earth Kingdom")
+    expect(page).to have_content("Fire Nation Navy")
+
+    expect(page).to have_content("Fire Nation train conductor")
+    expect(page).to have_content("Aang")
+    expect(page).to have_content("Combustion Man")
+    expect(page).to have_content("Fire Nation Fire Nation train")
+    expect(page).to have_content("None")
+    expect(page).to have_no_content("[]")
   end
 end
-
-
-# As a user,
-# When I visit "/"
-# And I Select "Fire Nation" from the select field
-# (Note: Use the existing select field)
-# And I click "Search For Members"
-# Then I should be on page "/search"
-# Then I should see the total number of people who live in the Fire Nation. (should be close to 100)
-# And I should see a list with the detailed information for the first 25 members of the Fire Nation.
-# And for each of the members I should see:
-# - The name of the member (and their photo, if they have one)
-# - The list of allies or "None"
-# - The list of enemies or "None"
-# - Any affiliations that the member has
